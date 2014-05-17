@@ -24,11 +24,28 @@ var App = React.createClass({
   },
 
   setTipo: function (i) {
-    return function () { this.setState({ tipo: i }); }.bind(this);
+    return function () {
+      this.setState({ tipo: i });
+      this.getData();
+    }.bind(this);
   },
 
   setFinalidade: function (i) {
-    return function () { this.setState({ finalidade: i }); }.bind(this);
+    return function () {
+      this.setState({ finalidade: i });
+      this.getData();
+    }.bind(this);
+  },
+
+  getData: function () {
+    $.getJSON('/property/show', { type: this.state.tipo, goal: this.state.finalidade })
+      .done(function (data) {
+        $(window).trigger('data', [data]);
+      })
+  },
+
+  componentWillMount: function () {
+    this.getData();
   },
 
   render: function () {
