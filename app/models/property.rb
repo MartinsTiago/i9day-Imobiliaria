@@ -8,6 +8,6 @@ class Property < ActiveRecord::Base
   end
 
   def as_json(options)
-    { lat: self.latitute, long: self.logitude, weight: self.weight }
+    { lat: self.latitute, longi: self.logitude, weight: self.weight }
   end
 end

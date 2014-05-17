@@ -6,6 +6,7 @@ I9dayImobiliaria::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'property#index'
+  get 'property/show', to: 'property#show', as: 'property_show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

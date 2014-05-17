@@ -59,7 +59,9 @@ function changeOpacity() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 $(window).on('data', function (ev, data) {
-    heatmap.setData(data.map(function (d) {
-        return { position: new google.maps.LatLng(d.lat, d.longi), weight: d.weight }
-    }));
+    var _data = data.map(function (d) {
+        return new google.maps.LatLng(d.lat, d.longi)
+    });
+
+    heatmap.setData(new google.maps.MVCArray(_data));
 });
