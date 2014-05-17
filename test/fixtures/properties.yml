@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trasaction_type: 
+  goal: 
+  kind: 
+  number_rooms: 
+  number_bathrooms: 
+  number_parking: 
+  area: 
+  has_elevator: 
+  age: 
+  latitute: 
+  logitude: 
+  sell_value: 
+  rent_value: 
+
+two:
+  trasaction_type: 
+  goal: 
+  kind: 
+  number_rooms: 
+  number_bathrooms: 
+  number_parking: 
+  area: 
+  has_elevator: 
+  age: 
+  latitute: 
+  logitude: 
+  sell_value: 
+  rent_value: 
