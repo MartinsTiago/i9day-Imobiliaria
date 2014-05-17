@@ -4,4 +4,8 @@ class PropertyController < ApplicationController
     goal = params[:goal]
     Property.where(trasaction_type: type, goal: goal).select(:latitude, :longitude).to_json
   end
+
+  def index
+
+  end
 end
