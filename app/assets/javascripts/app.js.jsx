@@ -38,7 +38,7 @@ var App = React.createClass({
   },
 
   getData: function () {
-    $.getJSON('/property/show', { type: this.state.tipo, goal: this.state.finalidade })
+    $.getJSON('/property/show', { type: this.props.tipos[this.state.tipo], goal: this.props.finalidades[this.state.finalidade] })
       .done(function (data) {
         $(window).trigger('data', [data]);
       })
